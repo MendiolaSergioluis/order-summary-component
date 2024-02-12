@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta-tags for a character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tag for SEO -->
+    <meta name="description" content="Frontend Mentor | Order summary card challenge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Page title -->
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Header with background images -->
+<header>
+    <img class="bg-desktop" src="images/pattern-background-desktop.svg" alt="">
+    <img class="bg-mobile" src="images/pattern-background-mobile.svg" alt="">
+</header>
+
+<!-- Main content -->
+<main>
+    <!-- Section with ARIA label -->
+    <section aria-labelledby="order-summary">
+        <!-- Hero image -->
+        <img src="images/illustration-hero.svg" alt="Illustration of a happy woman listening to music" class="img__hero">
+
+        <!-- Order summary -->
+        <article class="order">
+            <!-- Order description -->
+            <header class="order__description">
+                <h1 id="order-summary">Order Summary</h1>
+                <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+            </header>
+
+            <!-- Order billing -->
+            <div class="order__billing">
+                <!-- Plan details -->
+                <div class="plan">
+                    <img class="plan__img" src="images/icon-music.svg" alt="Music Icon">
+                    <div class="plan__info">
+                        <h2>Annual Plan</h2>
+                        <p>&dollar;59.99/year</p>
+                    </div>
+                </div>
+
+                <!-- Change plan button -->
+                <a href="#" class="btn-secondary">Change</a>
+            </div>
+
+            <!-- Proceed to payment button -->
+            <a href="#" class="btn-primary" role="button">Proceed to Payment</a>
+
+            <!-- Cancel order button -->
+            <a href="" class="btn-tertiary" role="button">Cancel Order</a>
+        </article>
+    </section>
+</main>
+
+<!-- Footer with attribution -->
+<footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <br>
+    Coded by <a href="#">Sergioluis Mendiola</a>.
+</footer>
+</body>
+</html>

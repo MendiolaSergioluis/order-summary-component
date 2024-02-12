@@ -1,0 +1,240 @@
+/* Define global styles and variables */
+:root {
+    /* Fonts */
+    --font-family: 'Red Hat Display', sans-serif;
+    --font-size: 100%;
+    /* Colors */
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --hover: hsl(245, 83%, 68%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+
+/* Reset default styles and set global styles */
+html, *, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+/* Center the body content and set the background color */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PaleBlue);
+}
+
+/* Position the background images */
+.bg-desktop, .bg-mobile {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* Style the section element */
+section {
+    width: 327px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Style the order element */
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 24px;
+    padding: 24px 32px;
+    background-color: white;
+}
+
+/* Style the order description */
+.order__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+/* Style the order description heading */
+.order__description h1 {
+    font-size: 1.375em;
+    font-weight: 900;
+    color: var(--DarkBlue);
+}
+
+/* Style the order description paragraph */
+.order__description p {
+    font-size: 0.9375em;
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--DesaturatedBlue);
+}
+
+/* Style the order billing */
+.order__billing {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--VeryPaleBlue);
+    border-radius: 20px;
+}
+
+/* Style the plan */
+.plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style the plan info */
+.plan__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+/* Style the plan info heading and paragraph */
+.plan__info h2, .plan__info p {
+    font-size: 0.875em;
+    line-height: normal;
+}
+
+/* Style the plan info heading */
+.plan__info h2 {
+    font-weight: 700;
+    color: var(--DarkBlue);
+}
+
+/* Style the plan info paragraph */
+.plan__info p {
+    font-weight: 500;
+    color: var(--DesaturatedBlue);
+}
+
+/* Style the primary button */
+.btn-primary {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--BrightBlue);
+    color: white;
+    font-size: 0.9375em;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 20px 20px 0 rgba(56, 42, 255, 0.1903);
+}
+
+/* Style the primary button on hover */
+.btn-primary:hover {
+    background-color: var(--hover);
+}
+
+/* Style the secondary and tertiary buttons */
+.btn-secondary, .btn-tertiary {
+    font-weight: 900;
+    font-size: 0.9375em;
+    text-decoration: none;
+}
+
+/* Style the secondary button */
+.btn-secondary {
+    color: var(--BrightBlue);
+}
+
+/* Style the secondary button on hover */
+.btn-secondary:hover {
+    text-decoration: none;
+    color: var(--hover);
+}
+
+/* Style the tertiary button */
+.btn-tertiary {
+    color: var(--DesaturatedBlue);
+}
+
+/* Style the tertiary button on hover */
+.btn-tertiary:hover {
+    color: var(--DarkBlue);
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 375px) {
+    .bg-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 375px) {
+    .bg-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    section {
+        width: 450px;
+    }
+
+    .order {
+        padding: 48px 48px;
+    }
+
+    .order__description h1 {
+        font-size: 28px;
+        line-height: normal;
+    }
+
+    .order__description p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+/* Style the attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries for responsive design */
+@media (min-width: 648px) {
+    .attribution br {
+        display: none;
+    }
+}
+
+/* Add focus styles to interactive elements */
+.btn-primary:focus, .btn-secondary:focus, .btn-tertiary:focus {
+    outline: 2px solid var(--BrightBlue);
+}
